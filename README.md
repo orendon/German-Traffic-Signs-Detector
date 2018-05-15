@@ -11,3 +11,4 @@ More details on `requirements.txt` file, main packages are:
 - tensorflow
 - scikit-learn
 - jupyter
+- scipy

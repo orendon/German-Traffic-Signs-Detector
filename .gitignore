@@ -1,3 +1,6 @@
 *.*~
 /kiwirn
 .vscode/
+/images
+*.pyc
+.ipynb_*
