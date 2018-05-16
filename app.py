@@ -1,13 +1,15 @@
 import click
 
+import kiwi.dataset as dataset
+
 # download command
 @click.group()
-def dataset():
+def data():
   pass
 
-@dataset.command()
+@data.command()
 def download():
-  click.echo('Downloading German dataset...')
+  dataset.process()
 
 # train command
 @click.group()
@@ -33,6 +35,6 @@ def test(m, d):
   """Usage: test -m MODEL -d FOLDER """
   click.echo('testing model %s on folder %s ' % (m, d))
 
-cli = click.CommandCollection(sources=[dataset, training, testing])
+cli = click.CommandCollection(sources=[data, training, testing])
 if __name__ == '__main__':
     cli()
