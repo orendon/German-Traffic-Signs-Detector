@@ -13,6 +13,7 @@ More details on `requirements.txt` file, main packages are:
 - scikit-image
 - opencv-python
 - jupyter
+- Pillow
 - scipy
 
 ## Implemented models

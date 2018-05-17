@@ -2,6 +2,7 @@ import numpy as np
 # import skimage
 import cv2
 import os
+import imghdr
 
 ROOT_PATH = os.path.abspath('.')
 
@@ -33,3 +34,18 @@ def from_folder(target_folder):
         Y_data.append(int(class_id))
 
   return np.array(X_data), np.array(Y_data)
+
+def from_infer_folder(target_folder):
+  """ Transform the data into a format suitable for model prediction """
+  X_data = []
+  files = []
+  data_dir = os.path.join(target_folder)
+  print("Loading images from", data_dir)
+  for file in os.listdir(data_dir):
+    image_path = os.path.join(ROOT_PATH, data_dir, file)
+    if os.path.basename(image_path) and imghdr.what(image_path):
+      X_data.append(prepare_image(image_path))
+      files.append(image_path)
+  
+  print("Found %s file(s)" % len(X_data))
+  return np.array(X_data), files
