@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/orendon/dev/ml/German-Traffic-Signs-Detector/models/model2/saved/logittf"
+all_model_checkpoint_paths: "/Users/orendon/dev/ml/German-Traffic-Signs-Detector/models/model2/saved/logittf"

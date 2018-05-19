@@ -4,10 +4,11 @@ import kiwi.dataset as dataset
 import kiwi.dataloader as dataloader
 import kiwi.inferer as inferer
 from kiwi.logitsk import LogitSk
+from kiwi.logittf import LogitTf
 
 MODEL_MAPPING = {
   "model1": LogitSk,
-  "model2": None,
+  "model2": LogitTf,
   "model3": None
 }
 MY_MODELS = list(MODEL_MAPPING.keys())
