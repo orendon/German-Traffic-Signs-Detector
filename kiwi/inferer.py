@@ -10,9 +10,8 @@ def add_label(file, label):
 
   return img
 
-def display_inferences(model, X_data, files):
+def display_inferences(files, predictions):
   print("\nPredictions summary:")
-  predictions = model.predict(X_data)
   for i in range(len(predictions)):
     class_label = CLASS_LABELS[str(predictions[i])]
     print(class_label)

@@ -1,5 +1,4 @@
 import sys
-from sklearn.metrics import accuracy_score
 
 def download_progress(blocknum, blocksize, totalsize):
   """ Display download progress bar in the command line.
@@ -15,11 +14,6 @@ def download_progress(blocknum, blocksize, totalsize):
       sys.stderr.write("\n")
   else: # total size is unknown
     sys.stderr.write("read %d\n" % (readsofar,))
-
-def calc_accuracy(model, x, y):
-    y_pred = model.predict(x)
-    accuracy = accuracy_score(y, y_pred) * 100
-    print('Model accuracy {}%'.format(round(accuracy, 2)))
 
 CLASS_LABELS = {
   "0": "speed limit 20 (prohibitory)",
